@@ -12,7 +12,7 @@ library(reshape2)
 
 
 # Dados para aplicação
-tabuas = read.csv('/home/walef/Downloads/TABUAS.csv',sep = ';', dec = ',')
+tabuas = read.csv('https://raw.githubusercontent.com/walefmachado/comutation_tables/master/data/TABUAS.csv',sep = ';', dec = ',')
 # attach(dados)
 
 
