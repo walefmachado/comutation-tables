@@ -1,15 +1,21 @@
 # Verifica Bibliotecas
-if (!(is.element("pacman", installed.packages()[,1]))) {
-    install.packages("pacman")
-}
+# if (!(is.element("pacman", installed.packages()[,1]))) {
+#     install.packages("pacman")
+# }
 
-pacman::p_load(plotly, tidyverse, reshape2, shiny, shinydashboard, DT)
+#pacman::p_load(tidyverse, shiny, shinydashboard, DT)
 #packrat::.snapshotImpl(".", snapshot.sources = FALSE) # cria arquivo packrat com todas dependências 
 
 # Bibliotecas
-library(plotly)
-library(reshape2)
-
+# install.packages('tidyverse')
+# install.packages('shiny')
+# install.packages('shinydashboard')
+# install.packages('DT')
+library(tidyverse)
+library(shiny)
+library(shinydashboard)
+library(DT)
+library(writexl)
 
 # Dados para aplicação
 tabuas = read.csv('https://raw.githubusercontent.com/walefmachado/comutation_tables/master/data/TABUAS.csv',sep = ';', dec = ',')

@@ -1,5 +1,6 @@
 library(shiny)
 library(shinydashboard)
+library(shinyjs)
 
 dashboardPage(
     dashboardHeader(title = "Comutação"), #Cabeçalho
@@ -11,7 +12,7 @@ dashboardPage(
 
     dashboardBody( #Corpo da página
         #Abas usadas para organizar a página por produtos e chamar a saída respectiva para o mesmo
-
+        useShinyjs(),
         tags$head(tags$link(rel = "stylesheet",
                        type = "text/css",
                        href = "styles.css")),
@@ -38,7 +39,8 @@ dashboardPage(
                   fluidRow(
                     box(
                       actionButton("updateVA", "Gerar tabela"),
-                      actionButton("reset", "Reset")
+                      actionButton("reset", "Reset"),
+                      downloadButton('downloadData', 'Download')
                     )
                   ),
                   fluidRow(
